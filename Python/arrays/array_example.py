@@ -16,8 +16,8 @@ def main():
 
     random_array = Array(100)
 
-    for index in range(len(random_array)):
-        random_array[index] = random.randint()
+    for i in range(len(random_array)):
+        random_array[i] = random.randint(0, 100)
 
 
     for value in random_array:
