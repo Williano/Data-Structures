@@ -28,7 +28,7 @@ class Array(object):
         return self.array_size
 
 
-    def __get_item__(self, index):
+    def __getitem__(self, index):
         """
             Returns an element from a specific location
         """
@@ -36,7 +36,7 @@ class Array(object):
         return self._elements[index]
 
 
-    def __set_item__(self, index, value):
+    def __setitem__(self, index, value):
         """
             Sets an element to a specific position
         """
@@ -56,4 +56,4 @@ class Array(object):
         """
             Iterates through the array and returns all elements
         """
-        return _ArrayIterator(self._elements)
+        return ArrayIterator(self._elements)
