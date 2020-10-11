@@ -14,7 +14,7 @@ class Array(object):
         # Create the array structure using the ctypes module.
         PyArrayType = ctypes.py_object * size
         self._elements = PyArrayType()
-        # Initialize each element.
+        # Initialize array.
         self.initialize_array(None)
 
 
@@ -38,4 +38,4 @@ class Array(object):
 
 
     def __iter__(self):
-        return ArrayIterator(self._elements)
+        return _ArrayIterator(self._elements)
