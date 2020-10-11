@@ -1,0 +1,19 @@
+# Vs code
+.DS_Store
+.vscode
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Python
+*.__pycache__
+*.pyc
+*.pyo
