@@ -145,4 +145,5 @@ class Array(object):
         -------
         None
         """
+
         return ArrayIterator(self._elements)
