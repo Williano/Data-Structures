@@ -1,4 +1,9 @@
+# Standard Library imports
 import ctypes
+
+# Local imports
+from array_iterator import ArrayIterator
+
 
 class Array(object):
 
@@ -33,4 +38,4 @@ class Array(object):
 
 
     def __iter__(self):
-        return __ArrayIterator(self._elements)
+        return ArrayIterator(self._elements)
