@@ -2,7 +2,7 @@
 import ctypes
 
 # Local imports
-from array_iterator import ArrayIterator
+from .array_iterator import ArrayIterator
 
 
 class Array(object):
