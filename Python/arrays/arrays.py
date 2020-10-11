@@ -15,7 +15,7 @@ class Array(object):
         PyArrayType = ctypes.py_object * size
         self._elements = PyArrayType()
         # Initialize each element.
-        self.clear(None)
+        self.initialize_array(None)
 
 
     def __len__(self):
@@ -32,7 +32,7 @@ class Array(object):
         self._elements[index] = value
 
 
-    def clear(self, value):
+    def initialize_array(self, value):
         for index in range(len(self)):
             self._elements[index] = value
 
