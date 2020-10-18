@@ -1,4 +1,4 @@
-from .arrays import Array
+from arrays import Array
 
 class Array2D:
 
@@ -33,9 +33,9 @@ class Array2D:
 
         self.check_array_subscript_range(row, column)
 
-        1d_array = self._row_references[row]
+        one_d_array = self._row_references[row]
 
-        return 1d_array[colum]
+        return one_d_array[column]
 
 
     def __setitem__(self, row_colum_index_tuple, value):
@@ -43,13 +43,13 @@ class Array2D:
         self.check_row_and_column_index()
 
         row = row_colum_index_tuple[0]
-        column = row_column_index_tuple[1]
+        column = row_colum_index_tuple[1]
 
         self.check_array_subscript_range(row, column)
 
-        1d_array = self._row_references[row]
+        one_d_array = self._row_references[row]
 
-        1d_array[column] = value
+        one_d_array[column] = value
 
 
     def check_array_subscript_range(self, row_index, column_index):
@@ -60,4 +60,4 @@ class Array2D:
 
     def check_row_and_column_index(self, row_column_index):
 
-        assert len(row_colum_index_tuple) == 2, "Invalid number of array subscripts"
+        assert len(row_column_index) == 2, "Invalid number of array subscripts"
