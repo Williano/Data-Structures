@@ -26,7 +26,7 @@ class Array2D:
 
     def __getitem__(self, row_colum_index_tuple):
 
-        self.check_row_and_column_index()
+        self.check_row_and_column_index(row_colum_index_tuple)
 
         row = row_colum_index_tuple[0]
         column = row_colum_index_tuple[1]
@@ -40,7 +40,7 @@ class Array2D:
 
     def __setitem__(self, row_colum_index_tuple, value):
 
-        self.check_row_and_column_index()
+        self.check_row_and_column_index(row_colum_index_tuple)
 
         row = row_colum_index_tuple[0]
         column = row_colum_index_tuple[1]
