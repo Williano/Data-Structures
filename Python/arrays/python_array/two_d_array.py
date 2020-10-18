@@ -55,7 +55,7 @@ class Array2D:
     def check_array_subscript_range(self, row_index, column_index):
 
         assert row_index >= 0 and row_index < self.get_num_of_rows() and \
-            column_index >=0 and column_index < self.get_num_of_columns(), "Array subscript out of range"
+            column_index >= 0 and column_index < self.get_num_of_columns(), "Array subscript out of range"
 
 
     def check_row_and_column_index(self, row_column_index):
