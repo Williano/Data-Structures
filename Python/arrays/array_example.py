@@ -29,7 +29,6 @@ def two_dim_array():
 
     random_two_d_array[3, 1] = random.randint(0, 100)
 
-    print(random_two_d_array[3, 1])
 
     for row in range(5):
         for col in range(5):
@@ -43,9 +42,9 @@ def two_dim_array():
 
 def main():
 
-    # one_dim_array()
+    one_dim_array()
 
-    # print("*************************")
+    print("*************************")
 
     two_dim_array()
 
