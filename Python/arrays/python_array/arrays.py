@@ -4,7 +4,6 @@ import ctypes
 # Local imports
 from .array_iterator import ArrayIterator
 
-
 class Array(object):
     """
     A class used to represent an Array
