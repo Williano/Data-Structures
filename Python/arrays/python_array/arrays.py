@@ -4,7 +4,9 @@ import ctypes
 # Local imports
 from .array_iterator import ArrayIterator
 
+
 class Array(object):
+
     """
     A class used to represent an Array
 
@@ -45,7 +47,6 @@ class Array(object):
         # Initialize array.
         self.initialize_array(None)
 
-
     def __len__(self):
         """
         Returns the size of the array
@@ -61,7 +62,6 @@ class Array(object):
         """
 
         return self.array_size
-
 
     def __getitem__(self, index):
         """
@@ -85,7 +85,6 @@ class Array(object):
 
         assert index >= 0 and index < len(self), "ERROR!!! Array subscript out of range."
         return self._elements[index]
-
 
     def __setitem__(self, index, value):
         """
@@ -113,7 +112,6 @@ class Array(object):
         assert index >= 0 and index < len(self), "ERROR!!! Array subscript out of range."
         self._elements[index] = value
 
-
     def initialize_array(self, value):
         """
         Initializes the array with specified value
@@ -130,7 +128,6 @@ class Array(object):
 
         for index in range(len(self)):
             self._elements[index] = value
-
 
     def __iter__(self):
         """
