@@ -12,6 +12,7 @@ import random
 from python_array.arrays import Array
 from python_array.two_d_array import Array2D
 
+
 def one_dim_array():
 
     random_array = Array(100)
@@ -19,9 +20,9 @@ def one_dim_array():
     for i in range(len(random_array)):
         random_array[i] = random.randint(0, 100)
 
-
     for value in random_array:
         print(value)
+
 
 def two_dim_array():
 
@@ -29,11 +30,9 @@ def two_dim_array():
 
     random_two_d_array[3, 1] = random.randint(0, 100)
 
-
     for row in range(5):
         for col in range(5):
             random_two_d_array[row, col] = random.randint(0, 100)
-
 
     for row in range(5):
         for col in range(5):
@@ -47,6 +46,7 @@ def main():
     print("*************************")
 
     two_dim_array()
+
 
 if __name__ == "__main__":
     main()
