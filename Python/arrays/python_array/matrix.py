@@ -29,3 +29,15 @@ class Matrix:
         for row in range(self.get_number_of_rows()):
             for column in range(self.get_number_of_columns()):
                 self[row, column] *= scalar
+
+    def transpose_matrix(self, scalar):
+        pass
+
+    def __add__(self, right_handside_matrix):
+        pass
+
+    def __sub__(self, right_handside_matrix):
+        pass
+
+    def __mul__(self, right_handside_matrix):
+        pass
