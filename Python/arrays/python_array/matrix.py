@@ -24,3 +24,8 @@ class Matrix:
             row_colum_index_tuple[0],
             row_colum_index_tuple[1]
             ] = scalar
+
+    def scale_matrix(self, scalar):
+        for row in range(self.get_number_of_rows()):
+            for column in range(self.get_number_of_columns()):
+                self[row, column] *= scalar
