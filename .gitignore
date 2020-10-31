@@ -17,3 +17,4 @@
 *.__pycache__
 *.pyc
 *.pyo
+*.python_array/__pycache__/arrays.cpython-38.pyc
