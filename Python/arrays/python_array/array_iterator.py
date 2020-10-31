@@ -27,7 +27,6 @@ class ArrayIterator(object):
         self._array_reference = array
         self._current_index = 0
 
-
     def __iter__(self):
         """
         Returns an instance of the object.
@@ -44,7 +43,6 @@ class ArrayIterator(object):
         """
 
         return self
-
 
     def __next__(self):
         """
