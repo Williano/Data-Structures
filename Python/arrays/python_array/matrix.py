@@ -9,3 +9,8 @@ class Matrix:
 
     def get_number_of_rows(self):
         return self._matrix_grid.get_num_of_rows()
+
+    def get_number_of_columns(self):
+        return self._matrix_grid.get_num_of_columns()
+
+
