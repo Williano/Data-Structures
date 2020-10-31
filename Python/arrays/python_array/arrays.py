@@ -80,10 +80,12 @@ class Array(object):
         Raises
         ------
         ArraySizeOutOfBoundsError
-            If the array size is less than zero and greater than the size of the array.
+            If the array size is less than zero and greater \
+                than the size of the array.
         """
 
-        assert index >= 0 and index < len(self), "ERROR!!! Array subscript out of range."
+        assert index >= 0 and index < len(self), "ERROR!!! Array subscript\
+             out of range."
         return self._elements[index]
 
     def __setitem__(self, index, value):
@@ -106,10 +108,12 @@ class Array(object):
         Raises
         ------
         ArraySizeOutOfBoundsError
-            If the array size is less than zero and greater than the size of the array.
+            If the array size is less than zero and greater than \
+                the size of the array.
         """
 
-        assert index >= 0 and index < len(self), "ERROR!!! Array subscript out of range."
+        assert index >= 0 and index < len(self), "ERROR!!! Array subscript \
+            out of range."
         self._elements[index] = value
 
     def initialize_array(self, value):
