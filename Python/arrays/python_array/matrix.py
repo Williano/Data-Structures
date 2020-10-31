@@ -19,3 +19,8 @@ class Matrix:
             row_colum_index_tuple[1]
             ]
 
+    def __setitem__(self, row_colum_index_tuple, scalar):
+        self._matrix_grid[
+            row_colum_index_tuple[0],
+            row_colum_index_tuple[1]
+            ] = scalar
