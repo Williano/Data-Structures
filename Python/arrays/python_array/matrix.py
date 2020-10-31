@@ -7,4 +7,5 @@ class Matrix:
         self._matrix_grid = Array2D(num_of_rows, num_of_cols)
         self._matrix_grid.initialize_array(0)
 
-
+    def get_number_of_rows(self):
+        return self._matrix_grid.get_num_of_rows()
