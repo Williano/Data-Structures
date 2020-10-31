@@ -14,5 +14,8 @@ class Matrix:
         return self._matrix_grid.get_num_of_columns()
 
     def __getitem__(self, row_colum_index_tuple):
-        return self._matrix_grid[row_colum_index_tuple[0], row_colum_index_tuple[1]]
+        return self._matrix_grid[
+            row_colum_index_tuple[0],
+            row_colum_index_tuple[1]
+            ]
 
