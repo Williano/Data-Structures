@@ -34,7 +34,20 @@ class Matrix:
         pass
 
     def __add__(self, right_handside_matrix):
-        pass
+        assert right_handside_matrix.get_num_of_rows() == \
+            self.get_number_of_rows() and \
+            right_handside_matrix.get_num_of_columns() == \
+            self.get_number_of_columns(), "Matrix sizes not compatible\
+            for the add operation."
+
+        new_matrix = Matrix(self.get_number_of_rows,
+                            self.get_number_of_columns)
+
+        for row in range(self.get_number_of_rows()):
+            for column in range(self.get_number_of_columns()):
+                new_matrix[row, column] = self[row, column] + \
+                    right_handside_matrix[row, column]
+        return new_matrix
 
     def __sub__(self, right_handside_matrix):
         pass
