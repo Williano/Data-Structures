@@ -10,10 +10,10 @@ class Stack(object):
         self.stack.append(value)
 
     def pop(self):
-        self.stack.pop()
+        return self.stack.pop()
 
     def peek(self):
-        self.stack[-1]
+        return self.stack[-1]
 
     def is_empty(self):
         return len(self.stack) == 0
