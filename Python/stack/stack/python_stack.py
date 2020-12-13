@@ -10,7 +10,10 @@ class Stack(object):
         self.stack.append(value)
 
     def pop(self):
-        return self.stack.pop()
+        try:
+            return self.stack.pop()
+        except Exception:
+            print("You cannot pop from an empty stack.")
 
     def peek(self):
         return self.stack[-1]
