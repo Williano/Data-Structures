@@ -10,7 +10,7 @@ def main():
 
     print("")
 
-    print(stack_container.is_empty())
+    print(stack_container.peek())
 
 
 if __name__ == "__main__":
