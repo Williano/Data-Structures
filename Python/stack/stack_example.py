@@ -7,9 +7,9 @@ def main():
 
     print("Pushing....")
     stack_container.push(5)
-    stack_container.pop()
+
     print("")
-    stack_container.pop()
+
     print(stack_container.peek())
 
 
