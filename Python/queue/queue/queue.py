@@ -10,7 +10,7 @@ class Queue(object):
         return len(self._queue)
 
     def is_empty(self):
-        pass
+        return len(self._queue) == 0
 
     def enqueue(self):
         pass
