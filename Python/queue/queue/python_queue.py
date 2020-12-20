@@ -21,4 +21,4 @@ class Queue(object):
         except Exception:
             print("Index out of range")
 
-        self._queue.popleft()
+        return self._queue.popleft()
