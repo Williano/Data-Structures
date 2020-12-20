@@ -16,4 +16,4 @@ class Queue(object):
         self._queue.appendleft(value)
 
     def deque(self):
-        self._queue.popleft
+        self._queue.popleft()
