@@ -16,4 +16,9 @@ class Queue(object):
         self._queue.appendleft(value)
 
     def deque(self):
+        try:
+            self.is_empty()
+        except Exception:
+            print("Index out of range")
+
         self._queue.popleft()
