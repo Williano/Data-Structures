@@ -7,7 +7,7 @@ class Queue(object):
         self._queue = deque()
 
     def size(self):
-        pass
+        return len(self._queue)
 
     def is_empty(self):
         pass
