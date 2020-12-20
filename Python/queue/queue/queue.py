@@ -17,5 +17,3 @@ class Queue(object):
 
     def deque(self):
         self._queue.popleft
-
-
