@@ -12,10 +12,9 @@ class Queue(object):
     def is_empty(self):
         return len(self._queue) == 0
 
-    def enqueue(self):
-        pass
+    def enqueue(self, value):
+        self._queue.appendleft(value)
 
     def deque(self):
         pass
-
 
