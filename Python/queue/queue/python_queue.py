@@ -13,7 +13,7 @@ class Queue(object):
         return len(self._queue) == 0
 
     def enqueue(self, value):
-        self._queue.appendleft(value)
+        self._queue.append(value)
 
     def deque(self):
         try:
