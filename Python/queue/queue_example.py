@@ -7,6 +7,8 @@ def main():
 
     data_queue.enqueue("William")
 
+    print(data_queue.deque)
+
 
 if __name__ == "__main__":
     main()
