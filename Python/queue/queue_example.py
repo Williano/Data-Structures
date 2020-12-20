@@ -6,6 +6,7 @@ def main():
     data_queue = Queue()
 
     data_queue.enqueue("William")
+    data_queue.enqueue("Bill")
 
     print(data_queue.deque())
 
