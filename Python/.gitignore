@@ -1,6 +1,6 @@
 # Vs code
 .DS_Store
-.vscode
+vscode/
 
 # Compiled Object files
 *.slo
@@ -14,6 +14,6 @@
 *.app
 
 # Python
-*.__pycache__
-*.pyc
+__pycache__/
+*.py[cod]
 *.pyo
