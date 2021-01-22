@@ -19,6 +19,6 @@ class Queue(object):
         try:
             self.is_empty()
         except Exception:
-            print("Index out of range")
+            print("Index out of bounds")
 
         return self._queue.popleft()
