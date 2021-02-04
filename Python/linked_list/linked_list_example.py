@@ -8,12 +8,14 @@ def main():
     linked_list.insert_at_front(5)
     linked_list.insert_at_front(20)
     linked_list.insert_at_end(50)
+    print(linked_list.size_of_list())
 
     linked_list.traverse_list()
 
     print()
     print("Inserting list")
     linked_list.insert_list_at_end(["Will", "Bill", "Me"])
+    print(linked_list.size_of_list())
     print()
     print("Printing list")
     print()
@@ -22,6 +24,7 @@ def main():
     print()
     print("Inserting list")
     linked_list.insert_list_at_front(["Will", "Bill", "Me"])
+    print(linked_list.size_of_list())
     print()
     print("Printing list")
     print()
