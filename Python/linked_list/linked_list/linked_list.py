@@ -27,3 +27,9 @@ class LinkedList(object):
                 current_node = current_node.next
 
             current_node.next = Node(data=data, next=None)
+
+    def insert_list(self, data_list):
+        self.head = None
+
+        for data in data_list:
+            self.insert_at_end(data)
