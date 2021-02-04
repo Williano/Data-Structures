@@ -1,2 +1,3 @@
 class LinkedList(object):
-    pass
+    def __init__(self):
+        self.head = None
