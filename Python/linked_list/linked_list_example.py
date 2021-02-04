@@ -7,6 +7,7 @@ def main():
 
     linked_list.add_at_begining(5)
     linked_list.add_at_begining(20)
+    linked_list.insert_at_end(50)
 
     linked_list.traverse_list()
 
