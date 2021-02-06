@@ -54,7 +54,7 @@ class LinkedList(object):
 
         count = 0
 
-        assert index < 0 and index >= self.size_of_list(), "Invalid index"
+        assert index >= 0 and index <= self.size_of_list(), "Invalid index"
 
         if index == 0:
             self.head = self.head.next
