@@ -38,6 +38,8 @@ class LinkedList(object):
 
             current_node.next = Node(data=data, next=None)
 
+    def insert_at_index(self, data):
+        pass
 
     def insert_list_at_front(self, data_list):
         self.head = None
