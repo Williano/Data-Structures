@@ -45,6 +45,18 @@ def main():
     print()
     linked_list.traverse_list()
 
+    # Insert at specific index
+    print()
+    print("Inserting list")
+    linked_list.insert_at_index(0, "Quick Text")
+    linked_list.traverse_list()
+    linked_list.insert_at_index(2, "Testing")
+    print(linked_list.size_of_list())
+    print()
+    print("Printing list")
+    print()
+    linked_list.traverse_list()
+
 
 if __name__ == "__main__":
     main()
