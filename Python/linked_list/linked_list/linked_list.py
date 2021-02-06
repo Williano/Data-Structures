@@ -38,6 +38,7 @@ class LinkedList(object):
 
             current_node.next = Node(data=data, next=None)
 
+
     def insert_list_at_front(self, data_list):
         self.head = None
 
@@ -54,7 +55,7 @@ class LinkedList(object):
 
         count = 0
 
-        assert index >= 0 and index <= self.size_of_list(), "Invalid index"
+        self.check_index_out_of_range(index)
 
         if index == 0:
             self.head = self.head.next
@@ -68,3 +69,8 @@ class LinkedList(object):
                 break
             current_node = current_node.next
             count += 1
+
+    def check_index_out_of_range(self, index):
+
+        assert index >= 0 and index <= self.size_of_list(), \
+            "(Error) Invalid index !!!"
