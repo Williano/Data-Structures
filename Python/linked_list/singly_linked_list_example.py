@@ -1,4 +1,4 @@
-from linked_list.singly_linked_list import SinglyLinkedList
+from linked_list.singly_linked_list.singly_linked_list import SinglyLinkedList
 
 
 def main():
