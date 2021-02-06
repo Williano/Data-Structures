@@ -23,7 +23,7 @@ class DoublyLinkedList(object):
 
     def search_by_value(self, value):
 
-        recent_search_result_pointer = self.head
+        recent_search_result_pointer = None
 
         if self.head is None:
             print("List is empty! You can search through an empty list.")
