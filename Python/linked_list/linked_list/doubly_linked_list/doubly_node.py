@@ -1,3 +1,5 @@
+
+
 class DoublyNode(object):
 
     def __init__(self, data):
