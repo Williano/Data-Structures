@@ -1,7 +1,7 @@
-from .node import Node
+from .singly_node import SinglyNode
 
 
-class LinkedList(object):
+class SinglyLinkedList(object):
     def __init__(self):
         self.head = None
 
@@ -23,12 +23,12 @@ class LinkedList(object):
             current_node = current_node.next
 
     def insert_at_front(self, data):
-        node = Node(data=data, next=self.head)
+        node = SinglyNode(data=data, next=self.head)
         self.head = node
 
     def insert_at_end(self, data):
         if self.head is None:
-            self.head = Node(data=data, next=None)
+            self.head = SinglyNode(data=data, next=None)
             return
         else:
             current_node = self.head
@@ -36,7 +36,7 @@ class LinkedList(object):
             while current_node.next:
                 current_node = current_node.next
 
-            current_node.next = Node(data=data, next=None)
+            current_node.next = SinglyNode(data=data, next=None)
 
     def insert_at_index(self, index, data):
 
@@ -51,7 +51,7 @@ class LinkedList(object):
         current_node = self.head
         while current_node:
             if count == index - 1:
-                node = Node(data=data, next=current_node.next)
+                node = SinglyNode(data=data, next=current_node.next)
                 current_node.next = node
 
             current_node = current_node.next
@@ -68,6 +68,12 @@ class LinkedList(object):
 
         for data in data_list:
             self.insert_at_end(data)
+
+    def insert_after_value(self, data_after, data_to_insert):
+        pass
+
+    def remove_by_value(self, value):
+        pass
 
     def remove_at_index(self, index):
 

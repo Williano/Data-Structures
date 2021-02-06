@@ -1,9 +1,9 @@
-from linked_list.linked_list import LinkedList
+from linked_list.singly_linked_list import SinglyLinkedList
 
 
 def main():
 
-    linked_list = LinkedList()
+    linked_list = SinglyLinkedList()
 
     # Insert at front
     linked_list.insert_at_front(5)
