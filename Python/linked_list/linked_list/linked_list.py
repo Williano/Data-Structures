@@ -19,7 +19,7 @@ class LinkedList(object):
         current_node = self.head
 
         while current_node is not None:
-            print(current_node.data)
+            print(current_node.data, end=" ---> ")
             current_node = current_node.next
 
     def insert_at_front(self, data):
