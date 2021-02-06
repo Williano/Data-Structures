@@ -50,3 +50,21 @@ class LinkedList(object):
         for data in data_list:
             self.insert_at_end(data)
 
+    def remove_at_index(self, index):
+
+        count = 0
+
+        assert index < 0 and index >= self.size_of_list(), "Invalid index"
+
+        if index == 0:
+            self.head = self.head.next
+            return
+
+        current_node = self.head
+
+        while current_node:
+            if count == index - 1:
+                current_node.next = current_node.next.next
+                break
+            current_node = current_node.next
+            count += 1
