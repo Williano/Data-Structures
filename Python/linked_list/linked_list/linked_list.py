@@ -38,8 +38,24 @@ class LinkedList(object):
 
             current_node.next = Node(data=data, next=None)
 
-    def insert_at_index(self, data):
-        pass
+    def insert_at_index(self, index, data):
+
+        count = 0
+
+        self.check_index_out_of_range(index)
+
+        if index == 0:
+            self.insert_at_front(data)
+            return
+
+        current_node = self.head
+        while current_node:
+            if count == index - 1:
+                node = Node(data=data, next=current_node.next)
+                current_node.next = node
+
+            current_node = current_node.next
+            count += 1
 
     def insert_list_at_front(self, data_list):
         self.head = None
@@ -64,7 +80,6 @@ class LinkedList(object):
             return
 
         current_node = self.head
-
         while current_node:
             if count == index - 1:
                 current_node.next = current_node.next.next
