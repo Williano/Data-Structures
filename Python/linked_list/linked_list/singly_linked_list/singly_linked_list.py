@@ -70,7 +70,22 @@ class SinglyLinkedList(object):
             self.insert_at_end(data)
 
     def insert_after_value(self, data_after, data_to_insert):
-        pass
+
+        new_node = SinglyNode(data=data_to_insert)
+
+        if self.head.data == data_after:
+            new_node.next = self.head.next
+            self.head.next = new_node
+
+        else:
+            current_node = self.head
+
+            while current_node:
+                if current_node.data == data_after:
+                    new_node.next = current_node.next
+                    current_node.next = new_node
+
+                current_node = current_node.next
 
     def remove_by_value(self, value):
 
