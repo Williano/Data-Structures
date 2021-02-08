@@ -71,6 +71,10 @@ class SinglyLinkedList(object):
 
     def insert_after_value(self, data_after, data_to_insert):
 
+        if self.head is None:
+            print("Error!!! Can't insert into an empty list")
+            return
+
         new_node = SinglyNode(data=data_to_insert)
 
         if self.head.data == data_after:
