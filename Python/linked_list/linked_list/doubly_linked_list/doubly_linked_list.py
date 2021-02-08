@@ -52,3 +52,31 @@ class DoublyLinkedList(object):
 
         # If the target is not found in the list, return False
         return False
+
+    def insert_value_into_ordered_linked_list(self, value):
+
+        new_node = DoublyNode(data=value)
+
+        if self.head is None:  # empty list
+            self.head = new_node
+            self.tail = self.head
+
+        elif value < self.head.data:  # insert before head
+            new_node.next = self.head
+            self.head.previous = new_node
+            self.head = new_node
+
+        elif value > self.head.data:  # insert after tail
+            new_node.previous = self.tail
+            self.tail.next = new_node
+            self.tail = new_node
+
+        else:  # insert in the middle
+            node = self.head
+            while node is not None and node.data < value:
+                node = node.next
+
+            new_node.next = node
+            new_node.previous = node.previous
+            node.previous.next = new_node
+            node.previous = new_node
