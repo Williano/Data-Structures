@@ -94,6 +94,7 @@ class SinglyLinkedList(object):
     def remove_by_value(self, value):
 
         if self.head is None:
+            print("Error!!! Can't insert into an empty list")
             return
 
         if self.head.data == value:
