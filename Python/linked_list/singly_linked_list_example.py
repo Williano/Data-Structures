@@ -70,7 +70,7 @@ def main():
 
     # Remove by value
     print()
-    print("Inserting data")
+    print("Removing data ..................")
     linked_list.remove_by_value(value="Example")
     linked_list.traverse_list()
     print(f'Size of list is: {linked_list.size_of_list()}')
