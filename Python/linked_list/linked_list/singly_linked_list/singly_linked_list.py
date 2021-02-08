@@ -89,18 +89,20 @@ class SinglyLinkedList(object):
 
     def remove_by_value(self, value):
 
-        if self.head is not None:
-            if self.head.data == value:
-                self.head = self.head.next
+        if self.head is None:
+            return
 
-            else:
-                current_node = self.head
+        if self.head.data == value:
+            self.head = self.head.next
 
-                while current_node:
-                    if current_node.data == value:
-                        pass
+        else:
+            current_node = self.head
 
-                    current_node = current_node.next
+            while current_node:
+                if current_node.data == value:
+                    pass
+
+                current_node = current_node.next
 
     def remove_at_index(self, index):
 
