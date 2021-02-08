@@ -68,6 +68,17 @@ def main():
     print()
     linked_list.traverse_list()
 
+    # Remove by value
+    print()
+    print("Inserting data")
+    linked_list.remove_by_value(value="Example")
+    linked_list.traverse_list()
+    print(f'Size of list is: {linked_list.size_of_list()}')
+    print()
+    print("Printing list")
+    print()
+    linked_list.traverse_list()
+
 
 if __name__ == "__main__":
     main()
