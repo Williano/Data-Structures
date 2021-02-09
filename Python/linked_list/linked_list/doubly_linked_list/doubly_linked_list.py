@@ -102,3 +102,11 @@ class DoublyLinkedList(object):
         if self.head is None:
             print("Linked list is empty")
             return
+
+    def get_tail_node(self):
+        current_node = self.head
+
+        while current_node.next:
+            current_node = current_node.next
+
+        return current_node
