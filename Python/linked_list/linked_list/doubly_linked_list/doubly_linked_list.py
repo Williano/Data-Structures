@@ -19,6 +19,7 @@ class DoublyLinkedList(object):
 
     def reverse_traversal(self):
 
+        self.check_if_list_is_empty()
 
         current_node = self.tail
 
