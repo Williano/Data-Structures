@@ -66,7 +66,26 @@ class DoublyLinkedList(object):
 
     def insert_at_index(self, index, data):
 
+        self.check_index_out_of_range(item_index=index)
 
+        if index == 0:
+            self.insert_at_front(data)
+            return
+
+        count = 0
+
+        current_node = self.head
+        while current_node:
+            if count == index - 1:
+                node = DoublyNode(
+                    data=data, next=current_node.next, previous=current_node)
+                if node.next:
+                    node.next.previous = node
+                current_node.next = node
+                break
+
+            current_node = current_node.next
+            count += 1
 
     def search_by_value(self, value):
 
@@ -141,7 +160,7 @@ class DoublyLinkedList(object):
 
         return current_node
 
-    def check_index_out_of_range(self, index):
+    def check_index_out_of_range(self, item_index):
 
-        if index >= 0 and index <= self.get_size_of_list():
+        if item_index >= 0 and item_index <= self.get_size_of_list():
             raise Exception("Invalid Index")
