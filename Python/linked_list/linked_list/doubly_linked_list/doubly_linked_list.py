@@ -110,6 +110,13 @@ class DoublyLinkedList(object):
             current_node = current_node.next
             count += 1
 
+    def insert_values(self, data_list):
+
+        self.head = None
+
+        for data in data_list:
+            self.insert_at_end(data=data)
+
     def search_by_value(self, value):
 
         recent_search_result_pointer = None
