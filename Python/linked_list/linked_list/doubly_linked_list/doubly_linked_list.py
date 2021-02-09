@@ -7,6 +7,17 @@ class DoublyLinkedList(object):
         self.head = None
         self.tail = None
 
+    def get_size_of_list(self):
+        count = 0
+
+        current_node = self.head
+
+        while current_node:
+            count += 1
+            current_node = current_node.next
+
+        return count
+
     def front_traversal(self):
 
         self.check_if_list_is_empty()
