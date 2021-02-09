@@ -32,6 +32,8 @@ class DoublyLinkedList(object):
 
         self.check_if_list_is_empty()
 
+        self.tail = self.get_tail_node()
+
         current_node = self.tail
 
         while current_node:
