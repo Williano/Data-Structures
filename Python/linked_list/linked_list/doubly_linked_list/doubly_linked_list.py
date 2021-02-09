@@ -8,6 +8,11 @@ class DoublyLinkedList(object):
         self.tail = None
 
     def front_traversal(self):
+
+        if self.head is None:
+            print("Linked list is empty")
+            return
+
         current_node = self.head
 
         while current_node:
