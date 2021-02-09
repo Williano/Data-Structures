@@ -87,6 +87,29 @@ class DoublyLinkedList(object):
             current_node = current_node.next
             count += 1
 
+    def remove_at_index(self, index):
+
+        self.check_index_out_of_range(item_index=index)
+
+        if index == 0:
+            self.head = self.head.next
+            self.head.previous = None
+            return
+
+        count = 0
+
+        current_node = self.head
+
+        while current_node:
+            if count == index:
+                current_node.previous.next = current_node.next
+                if current_node.next:
+                    current_node.next.previous = current_node.previous
+                break
+
+            current_node = current_node.next
+            count += 1
+
     def search_by_value(self, value):
 
         recent_search_result_pointer = None
