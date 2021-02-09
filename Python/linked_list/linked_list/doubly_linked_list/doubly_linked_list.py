@@ -40,6 +40,16 @@ class DoublyLinkedList(object):
             print(current_node.data, end=" <--- ")
             current_node = current_node.previous
 
+    def insert_at_front(self, data):
+
+        if self.head is None:
+            node = DoublyNode(data=data, next=self.head, previous=None)
+            self.head = node
+        else:
+            node = DoublyNode(data=data, next=self.head, previous=None)
+            self.head.previous = node
+            self.head = node
+
     def search_by_value(self, value):
 
         recent_search_result_pointer = None
