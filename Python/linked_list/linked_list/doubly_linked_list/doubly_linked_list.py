@@ -50,6 +50,20 @@ class DoublyLinkedList(object):
             self.head.previous = node
             self.head = node
 
+    def insert_at_end(self, data):
+
+        if self.head is None:
+            self.head = DoublyNode(data=data, next=None, previous=None)
+            return
+        else:
+            current_node = self.head
+
+            while current_node.next:
+                current_node = current_node.next
+
+            current_node.next = DoublyNode(
+                data=data, next=None, previous=current_node)
+
     def search_by_value(self, value):
 
         recent_search_result_pointer = None
