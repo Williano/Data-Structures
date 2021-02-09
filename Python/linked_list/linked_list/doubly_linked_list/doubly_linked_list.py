@@ -9,9 +9,7 @@ class DoublyLinkedList(object):
 
     def front_traversal(self):
 
-        if self.head is None:
-            print("Linked list is empty")
-            return
+        self.check_if_list_is_empty()
 
         current_node = self.head
 
@@ -20,6 +18,8 @@ class DoublyLinkedList(object):
             current_node = current_node.next
 
     def reverse_traversal(self):
+
+
         current_node = self.tail
 
         while current_node:
@@ -85,3 +85,8 @@ class DoublyLinkedList(object):
             new_node.previous = node.previous
             node.previous.next = new_node
             node.previous = new_node
+
+    def check_if_list_is_empty(self):
+        if self.head is None:
+            print("Linked list is empty")
+            return
