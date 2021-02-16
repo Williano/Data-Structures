@@ -132,4 +132,3 @@ class SinglyLinkedList(object):
 
         assert index >= 0 and index <= self.size_of_list(), \
             "(Error) Invalid index !!!"
-
