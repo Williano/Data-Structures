@@ -1,3 +1,4 @@
+from linked_list.doubly_linked_list.doubly_linked_list import DoublyLinkedList
 
 
 def main():
