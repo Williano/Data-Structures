@@ -23,7 +23,16 @@ def main():
     doubly_list.insert_at_index(0, data="jackfruit")
     doubly_list.front_traversal()
     print(" ")
-    print(doubly_list.get_size_of_list())
+
+    doubly_list.insert_at_index(6, "dates")
+    doubly_list.front_traversal()
+    print(" ")
+
+    doubly_list.insert_at_index(2, data="kiwi")
+    doubly_list.front_traversal()
+
+    print(" ")
+    doubly_list.reverse_traversal()
 
 
 if __name__ == '__main__':
