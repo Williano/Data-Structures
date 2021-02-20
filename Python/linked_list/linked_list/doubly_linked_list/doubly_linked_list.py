@@ -192,5 +192,5 @@ class DoublyLinkedList(object):
 
     def check_index_out_of_range(self, item_index):
 
-        if item_index >= 0 and item_index <= self.get_size_of_list():
-            raise Exception("Invalid Index")
+        assert item_index >= 0 and item_index <= self.get_size_of_list(), \
+            "(Error) Invalid index !!!"
