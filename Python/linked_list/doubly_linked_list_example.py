@@ -9,10 +9,12 @@ def main():
     doubly_list.insert_values(["banana", "mango", "grapes", "orange"])
 
     # Traverse
-    # doubly_list.reverse_traversal()
-    # doubly_list.front_traversal()
+    doubly_list.reverse_traversal()
+    print(" ")
+    doubly_list.front_traversal()
 
     # Insert at end
+    print(" ")
     doubly_list.insert_at_end(data="figs")
     doubly_list.front_traversal()
     print(" ")
