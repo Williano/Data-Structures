@@ -10,8 +10,12 @@ def reverse_string(sentence):
     for word in splitted_sentence:
         stack_container.push(word[::-1])
 
+    print(stack_container.is_empty())
+
     for word in range(len(splitted_sentence)):
         print(stack_container.pop())
+
+    print(stack_container.is_empty())
 
 
 def main():
