@@ -130,5 +130,4 @@ class SinglyLinkedList(object):
 
     def check_index_out_of_range(self, index):
 
-        assert index >= 0 and index <= self.size_of_list(), \
-            "(Error) Invalid index !!!"
+        assert index >= 0 and index <= self.size_of_list(), "(Error) Invalid index !!!"
