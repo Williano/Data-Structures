@@ -2,7 +2,6 @@ from collections import deque
 
 
 class Queue(object):
-
     def __init__(self):
         self._queue = deque()
 
