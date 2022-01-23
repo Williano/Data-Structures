@@ -2,7 +2,6 @@ from .doubly_node import DoublyNode
 
 
 class DoublyLinkedList(object):
-
     def __init__(self):
         self.head = None
         self.tail = None
@@ -61,8 +60,7 @@ class DoublyLinkedList(object):
             while current_node.next:
                 current_node = current_node.next
 
-            current_node.next = DoublyNode(
-                data=data, next=None, previous=current_node)
+            current_node.next = DoublyNode(data=data, next=None, previous=current_node)
 
     def insert_at_index(self, index, data):
 
@@ -78,7 +76,8 @@ class DoublyLinkedList(object):
         while current_node:
             if count == index - 1:
                 node = DoublyNode(
-                    data=data, next=current_node.next, previous=current_node)
+                    data=data, next=current_node.next, previous=current_node
+                )
                 if node.next:
                     node.next.previous = node
                 current_node.next = node
@@ -130,21 +129,23 @@ class DoublyLinkedList(object):
         # If the the value comes before the recent result pointer,
         # we traverse backward otherwise traverse forward.
         if value < recent_search_result_pointer.data:
-            while recent_search_result_pointer and value <= \
-                    recent_search_result_pointer.data:
+            while (
+                recent_search_result_pointer
+                and value <= recent_search_result_pointer.data
+            ):
                 if value == recent_search_result_pointer.data:
                     return True
                 else:
-                    recent_search_result_pointer = \
-                        recent_search_result_pointer.previous
+                    recent_search_result_pointer = recent_search_result_pointer.previous
         else:
-            while recent_search_result_pointer and value >= \
-                    recent_search_result_pointer.data:
+            while (
+                recent_search_result_pointer
+                and value >= recent_search_result_pointer.data
+            ):
                 if value == recent_search_result_pointer.data:
                     return True
                 else:
-                    recent_search_result_pointer = \
-                        recent_search_result_pointer.next
+                    recent_search_result_pointer = recent_search_result_pointer.next
 
         # If the target is not found in the list, return False
         return False
@@ -192,5 +193,6 @@ class DoublyLinkedList(object):
 
     def check_index_out_of_range(self, item_index):
 
-        assert item_index >= 0 and item_index <= self.get_size_of_list(), \
-            "(Error) Invalid index !!!"
+        assert (
+            item_index >= 0 and item_index <= self.get_size_of_list()
+        ), "(Error) Invalid index !!!"
