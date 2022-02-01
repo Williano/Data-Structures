@@ -23,6 +23,8 @@ def main():
     root.add_child(cellphone)
     root.add_child(tv)
 
+    root.print_tree()
+
 
 if __name__ == "__main__":
     main()
