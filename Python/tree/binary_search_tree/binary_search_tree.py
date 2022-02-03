@@ -45,6 +45,7 @@ class BinarySearchTreeNode:
         """
         Prints elements in the tree in an order from left sub tree,
         then root and right sub tree.
+
         """
 
         elements: List = []
