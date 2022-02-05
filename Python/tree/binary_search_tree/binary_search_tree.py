@@ -39,7 +39,7 @@ class BinarySearchTreeNode:
             if self.right:
                 self.right.add_child(data)
             else:
-                self.left = BinarySearchTreeNode(data=data)
+                self.right = BinarySearchTreeNode(data=data)
 
     def in_order_traversal(self) -> List:
         """
