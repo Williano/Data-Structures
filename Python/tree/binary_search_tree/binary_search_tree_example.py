@@ -14,7 +14,7 @@ def build_tree(elements):
 
 def main():
 
-    numbers = [17, 4, 1, 20, 9, 23, 18, 34]
+    numbers = [17, 4, 1, 20, 9, 23, 18, 34, 18, 4]
 
     numbers_tree = build_tree(numbers)
 

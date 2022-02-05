@@ -63,6 +63,47 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def pre_order_traversal(self) -> List:
+
+        """
+        Prints elements in the tree in an order from root,
+        then left sub-tree and right sub-tree.
+        """
+        elements = []
+
+        # Add root to list first
+        elements.append(self.data)
+
+        # Add left sub-tree
+        if self.left:
+            elements += self.left.pre_order_traversal()
+
+        # Add right sub-tree
+        if self.right:
+            elements += self.right.pre_order_traversal()
+
+        return elements
+
+    def post_order_travesal(self) -> List:
+        """
+        Prints elements in the tree in an order from left sub-tree,
+        then right sub-tree and root.
+        """
+        elements: List = []
+
+        # Add left sub-tree
+        if self.left:
+            elements += self.left.post_order_travesal()
+
+        # Add right sub-tree
+        if self.right:
+            elements += self.right.post_order_travesal()
+
+        # Add root
+        elements.append(self.data)
+
+        return elements
+
     def search(self, value):
         """
         Searches for a value in the tree and returns True if the value is found
