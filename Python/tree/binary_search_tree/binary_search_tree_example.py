@@ -22,6 +22,9 @@ def main():
     print(numbers_tree.pre_order_traversal())
     print(numbers_tree.post_order_travesal())
     print(numbers_tree.search(value=2))
+    print(f"Max of tree is: {numbers_tree.find_max()}")
+    print(f"Min of tree is: {numbers_tree.find_min()}")
+    print(f"Sum of tree is: {numbers_tree.calculate_sum()}")
     print(f"Height of tree is: {numbers_tree.height()}")
 
 
