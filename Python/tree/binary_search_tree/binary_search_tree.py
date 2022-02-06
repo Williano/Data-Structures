@@ -1,3 +1,4 @@
+from turtle import left
 from typing import List
 
 
@@ -128,3 +129,45 @@ class BinarySearchTreeNode:
                 return self.right.search(value)
 
         return False
+
+    def find_max(self):
+        """
+        Returns the maximum value in the tree
+        """
+
+        if self.right is None:
+            return self.data
+
+        return self.right.find_max()
+
+    def find_min(self):
+        """
+        Returns the maximum value in the tree
+        """
+
+        if self.left is None:
+            return self.data
+
+        return self.left.find_min()
+
+    def calculate_sum(self):
+        """
+        Calculates the sum of the tree
+        """
+        left_sum = self.left.calculate_sum() if self.left else 0
+        right_sum = self.right.calculate_sum() if self.right else 0
+
+        return self.data + left_sum + right_sum
+
+    def height(self) -> int:
+        """
+        Calculates the height of the tree
+
+        Returns:
+            int: height of the tree
+        """
+
+        left_depth = self.left.height() if self.left else 0
+        right_depth = self.right.height() if self.right else 0
+
+        return max(left_depth, right_depth) + 1
