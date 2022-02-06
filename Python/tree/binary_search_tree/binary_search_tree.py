@@ -132,7 +132,7 @@ class BinarySearchTreeNode:
 
     def find_max(self):
         """
-        Returns the maximum value in the tree
+        Finds the maximum value in the tree
         """
 
         if self.right is None:
@@ -142,7 +142,7 @@ class BinarySearchTreeNode:
 
     def find_min(self):
         """
-        Returns the maximum value in the tree
+        Finds the maximum value in the tree
         """
 
         if self.left is None:
