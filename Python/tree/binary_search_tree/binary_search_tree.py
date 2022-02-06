@@ -167,6 +167,9 @@ class BinarySearchTreeNode:
             int: height of the tree
         """
 
+        if self.data is None:
+            return 0
+
         left_depth = self.left.height() if self.left else 0
         right_depth = self.right.height() if self.right else 0
 
