@@ -26,6 +26,7 @@ def main():
     print(f"Min of tree is: {numbers_tree.find_min()}")
     print(f"Sum of tree is: {numbers_tree.calculate_sum()}")
     print(f"Height of tree is: {numbers_tree.height()}")
+    print(f"Tree Balance: {numbers_tree.is_balanced()}")
 
 
 if __name__ == "__main__":

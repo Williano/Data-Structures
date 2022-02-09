@@ -1,4 +1,3 @@
-from turtle import left
 from typing import List
 
 
@@ -174,3 +173,31 @@ class BinarySearchTreeNode:
         right_depth = self.right.height() if self.right else 0
 
         return max(left_depth, right_depth) + 1
+
+    def delete(self, value):
+        """[summary]
+
+        Args:
+            value ([type]): [description]
+        """
+        pass
+
+    def is_balanced(self) -> bool:
+        """Checks whether the tree is balanced or not
+
+        Returns:
+            bool: returns True if tree is balanced and False if it is not
+        """
+
+        if self.data is None:
+            return True
+
+        if self.left:
+            left_height: int = self.left.height()
+
+        if self.right:
+            right_height: int = self.right.height()
+
+        status: bool = abs(left_height - right_height) <= 1
+
+        return status and self.is_balanced() and self.is_balanced()
