@@ -1,3 +1,4 @@
+from turtle import left
 from typing import List
 
 
@@ -178,7 +179,7 @@ class BinarySearchTreeNode:
         """[summary]
 
         Args:
-            value ([type]): [description]
+            value (Any): [description]
         """
         pass
 
@@ -190,14 +191,18 @@ class BinarySearchTreeNode:
         """
 
         if self.data is None:
-            return True
+            return [True, 0]
 
-        if self.left:
-            left_height: int = self.left.height()
+        left_sub_tree: List = self.left.is_balanced() if self.left else [True, 0]
 
-        if self.right:
-            right_height: int = self.right.height()
+        right_sub_tree: List = self.right.is_balanced() if self.right else [True, 0]
 
-        status: bool = abs(left_height - right_height) <= 1
+        is_balanced: bool = (
+            left_sub_tree[0]
+            and right_sub_tree[0]
+            and abs(left_sub_tree[1] - right_sub_tree[1]) <= 1
+        )
 
-        return status and self.is_balanced() and self.is_balanced()
+        return [is_balanced, self.height()]
+
+        # return [is_balanced, 1 + max(left_sub_tree[1], right_sub_tree[1])]
