@@ -1,4 +1,4 @@
-from turtle import left
+from collections import deque
 from typing import List
 
 
@@ -105,6 +105,71 @@ class BinarySearchTreeNode:
 
         return elements
 
+    def level_order_travesal(self, root) -> List:
+        """[summary]
+
+        Returns:
+            List: [description]
+        """
+
+        if root is None:
+            return
+
+        queue = deque()
+        queue.append(root)
+
+        data: List = []
+
+        while queue:
+
+            level: List = []
+            for _ in range(len(queue)):
+
+                current_node = queue.popleft()
+
+                if current_node:
+                    level.append(current_node.data)
+
+                if current_node.left:
+                    queue.append(current_node.left)
+
+                if current_node.right:
+                    queue.append(current_node.right)
+
+            if level:
+                data.append(level)
+
+        return data
+
+    def level_order_travesal_v2(self, root) -> List:
+        """[summary]
+
+        Returns:
+            List: traversed list
+        """
+
+        if root is None:
+            return
+
+        queue = deque()
+        queue.append(root)
+
+        data: List = []
+
+        while queue:
+            current_node = queue.popleft()
+
+            if current_node.left:
+                queue.append(current_node.left)
+
+            if current_node.right:
+                queue.append(current_node.right)
+
+            if current_node:
+                data.append(current_node.data)
+
+        return data
+
     def search(self, value):
         """
         Searches for a value in the tree and returns True if the value is found
@@ -203,6 +268,29 @@ class BinarySearchTreeNode:
             and abs(left_sub_tree[1] - right_sub_tree[1]) <= 1
         )
 
-        return [is_balanced, self.height()]
+        # return [is_balanced, self.height()]
 
-        # return [is_balanced, 1 + max(left_sub_tree[1], right_sub_tree[1])]
+        return [is_balanced, 1 + max(left_sub_tree[1], right_sub_tree[1])]
+
+    def balanced(self) -> bool:
+        """Checks whether the tree is balanced or not
+
+        Returns:
+            bool: returns True if tree is balanced and False if it is not
+        """
+
+        if self.data is None:
+            return self.data
+
+        # Calucate the height of the left and right sub trees
+        left_sub_tree = self.left.height() if self.left else 0
+        right_sub_tree = self.right.height() if self.right else 0
+
+        if abs(left_sub_tree - right_sub_tree) <= 1:
+            return True
+
+        # Check if the left and right sub trees are balanced
+        is_left_balanced = self.left.balanced() if self.left else False
+        is_right_balanced = self.right.balanced() if self.right else False
+
+        return is_left_balanced and is_right_balanced
