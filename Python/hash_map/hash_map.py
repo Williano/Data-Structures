@@ -20,7 +20,7 @@ class HashMap:
             if len(element) == 2 and element[0] == key:
                 self.hash_table[index][item_index] = (key, value)
                 found = True
-                break
+                return
 
         # Insert value at specified key if it does not exist
         if not found:

@@ -123,6 +123,7 @@ class BinarySearchTreeNode:
         while queue:
 
             level: List = []
+
             for _ in range(len(queue)):
 
                 current_node = queue.popleft()

@@ -22,6 +22,14 @@ class SinglyLinkedList(object):
             print(current_node.data, end=" ---> ")
             current_node = current_node.next
 
+    def reverse_traversal(self, head) -> None:
+
+        current_node = self.head
+
+        if current_node:
+            self.reverse_traversal(self.head.next)
+            print(current_node.data, end=" ---> ")
+
     def insert_at_front(self, data):
         node = SinglyNode(data=data, next=self.head)
         self.head = node

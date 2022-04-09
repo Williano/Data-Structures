@@ -12,6 +12,7 @@ def main():
     print(linked_list.size_of_list())
 
     linked_list.traverse_list()
+    linked_list.reverse_traversal(linked_list)
 
     print()
     print("Inserting list")
@@ -62,7 +63,7 @@ def main():
     print("Inserting data")
     linked_list.insert_after_value(data_after="Testing", data_to_insert=5)
     linked_list.traverse_list()
-    print(f'Size of list is: {linked_list.size_of_list()}')
+    print(f"Size of list is: {linked_list.size_of_list()}")
     print()
     print("Printing list")
     print()
@@ -73,7 +74,7 @@ def main():
     print("Removing data ..................")
     linked_list.remove_by_value(value="Example")
     linked_list.traverse_list()
-    print(f'Size of list is: {linked_list.size_of_list()}')
+    print(f"Size of list is: {linked_list.size_of_list()}")
     print()
     print("Printing list")
     print()
